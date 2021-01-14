@@ -1,75 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Console Tricks!</title>
-  </head>
-  <body>
-    <p onClick="makeGreen()">×BREAK×DOWN×</p>
+<head>
+  <meta charset="UTF-8">
+  <title>Console Tricks!</title>
+</head>
+<body>
 
-    <script>
-      const dogs = [
-        { name: "Snickers", age: 2 },
-        { name: "hugo", age: 8 },
-      ];
+  <p onClick="makeGreen()">×BREAK×DOWN×</p>
 
-      function makeGreen() {
-        const p = document.querySelector("p");
-        p.style.color = "#BADA55";
-        p.style.fontSize = "50px";
-      }
+  <script>
+    const dogs = [{ name: 'Snickers', age: 2 }, { name: 'hugo', age: 8 }];
 
-      // Regular
-      console.log("Regular");
+    function makeGreen() {
+      const p = document.querySelector('p');
+      p.style.color = '#BADA55';
+      p.style.fontSize = '50px';
+    }
 
-      // Interpolated
-      const data = "String";
-      console.log(`${data} interpolated.`);
+    // Regular
 
-      // Styled
-      console.log("%c Styled.", "font-size: 20px");
+    // Interpolated
 
-      // warning!
-      console.warn("This is a warning!");
+    // Styled
 
-      // Error :|
-      console.error("This is a fucking error");
+    // warning!
 
-      // Info
-      console.info("Crocodiles eat 3-4 people per year");
+    // Error :|
 
-      // Testing
-      console.assert(1 === 2, "This is wrong");
+    // Info
 
-      // Viewing DOM Elements
-      const p = document.querySelector("p");
-      console.dir(p);
+    // Testing
 
-      // Grouping together
-      dogs.forEach((dog) => {
-        console.group(`${dog.name}`);
-        console.log(`${dog.name} is ${dog.age} years old`);
-        console.groupEnd(`${dog.name}`);
-      });
+    // clearing
 
-      // counting
-      console.count("John");
-      console.count("John");
-      console.count("John");
-      console.count("John");
-      console.count("Alex");
+    // Viewing DOM Elements
 
-      // timing
-      console.time("starwarApi");
-      fetch("https://swapi.dev/api/")
-        .then((blob) => blob.json())
-        .then((json) => {
-          console.timeEnd("starwarApi");
-          console.log(json);
-        });
+    // Grouping together
 
-      // clearing
-      // console.clear();
-    </script>
-  </body>
+    // counting
+
+    // timing
+
+  </script>
+</body>
 </html>
