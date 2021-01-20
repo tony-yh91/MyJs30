@@ -96,19 +96,19 @@
 
     <script>
       let lastIndex = null;
-      // function onShiftClick(e) {
-      //   const checkboxesAry = Array.from(checkboxes);
-      //   if (e.shiftKey) {
-      //     const startIndex = checkboxesAry.indexOf(lastIndex);
-      //     const endIndex = checkboxesAry.indexOf(this);
-      //     // console.log(`${startIndex} to ${endIndex}`);
-      //     for (let index = startIndex; index <= endIndex; index++) {
-      //       const element = checkboxesAry[index];
-      //       element.checked = true;
-      //     }
-      //   }
-      //   lastIndex = this;
-      // }
+      function onShiftClick(e) {
+        const checkboxesAry = Array.from(checkboxes);
+        if (e.shiftKey) {
+          const startIndex = checkboxesAry.indexOf(lastIndex);
+          const endIndex = checkboxesAry.indexOf(this);
+          // console.log(`${startIndex} to ${endIndex}`);
+          for (let index = startIndex; index <= endIndex; index++) {
+            const element = checkboxesAry[index];
+            element.checked = true;
+          }
+        }
+        lastIndex = this;
+      }
       function onShiftClick2(e) {
         let inBetween = false;
         if (e.shiftKey) {
@@ -125,7 +125,7 @@
       }
       const checkboxes = document.querySelectorAll(".inbox input[type=checkbox]");
       checkboxes.forEach((checkbox) => {
-        checkbox.addEventListener("click", onShiftClick2);
+        checkbox.addEventListener("click", onShiftClick);
       });
     </script>
   </body>
